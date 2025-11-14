@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://testingdeployment-juen.onrender.com' || '*',
+  origin: 'https://fastidious-creponne-59066f.netlify.app/' || '*',
   credentials: true
 }));
 app.use(bodyParser.json());
