@@ -50,6 +50,10 @@ app.use('/api/admin/about', identifyVillage, adminAboutRoute);
 app.use('/api/admin/officials', identifyVillage, adminOfficialsRoute);
 app.use('/api/admin/complaints', identifyVillage, adminComplaintsRoute);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Gram Panchayat API');
+});
+
 // Complaint submission route (public, but needs village identification)
 app.post('/api/complaints', identifyVillage, async (req, res) => {
   try {
