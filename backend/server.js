@@ -1,10 +1,10 @@
 const express = require('express');
-const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const { connectDB } = require('./config/database');
 const { identifyVillage } = require('./middleware/villageIdentifier');
+const corsMiddleware = require('./middleware/cors');
 
 // Import routes
 const publicImagesRoute = require('./routes/public/images');
@@ -20,10 +20,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-  origin: 'https://fastidious-creponne-59066f.netlify.app/' || '*',
-  credentials: true
-}));
+app.use(corsMiddleware); // Custom CORS middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
