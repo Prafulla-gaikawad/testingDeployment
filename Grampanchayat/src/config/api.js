@@ -1,6 +1,6 @@
 // API Configuration
 // const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
-const API_BASE_URL = 'https://testingdeployment-juen.onrender.com';
+const API_BASE_URL = 'https://testingdeployment-juen.onrender.com/api';
 const VILLAGE_DOMAIN = import.meta.env.VITE_VILLAGE_DOMAIN || window.location.hostname;
 
 /**
