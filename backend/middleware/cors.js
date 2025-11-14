@@ -9,6 +9,7 @@ const corsOptions = {
   origin: function (origin, callback) {
     // Define allowed origins
     const allowedOrigins = [
+        'https://fastidious-creponne-59066f.netlify.app/',
       'http://localhost:5173',      // Vite default dev server
       'http://localhost:3000',      // React default dev server
       'http://localhost:5174',      // Alternative Vite port
